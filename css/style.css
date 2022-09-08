@@ -36,6 +36,10 @@ body {
     color: var(--white);
 }
 
+li {
+    list-style: none;
+}
+
 /* Header */
 header {
     display: flex;
@@ -83,30 +87,23 @@ header div:nth-child(2) i {
 /* Main */
 main {
     height: 100vh;
-    max-width: 95%;
     margin: 0 auto;
 }
 
 .wrapper {
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: flex-start;
-    margin: 0 auto;
+    padding-top: 45px;
 }   
 
 .image {
     position: relative;
-    padding: 0 15px;
-    width: calc((100% - 60px) / 5);
+    padding: 5px;
+    height: calc((100vh - 120px) / 5);
 }
 
-.image img {
-    max-width: 250px;
-}
-
-.image .inner-menu {
+.image .status {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -115,12 +112,12 @@ main {
     border-radius: 3px;
     font-size: 14px;
     position: absolute;
-    bottom: 12px;
+    bottom: 10px;
     left: 10px;
     display: none;
 }
 
-.image .status {
+.image .inner-menu {
     display: flex;
     justify-content: flex-start;
     background-color: var(--blue);
@@ -128,19 +125,21 @@ main {
     border-radius: 4px;
     font-size: 14px;
     position: absolute;
-    top: 9px;
-    right: 9px;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
     display: none;
 }
 
-.image i:not(.status i) {
+.image i:not(.inner-menu i) {
     font-size: 12px;
     padding-right: 5px;
 }
 
 .image img {
-    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
 }
 
 .image:hover .status {
@@ -165,22 +164,9 @@ footer {
     z-index: 998;
 }
 
-footer ul:nth-child(1) {
-    flex-basis: 25%;
-}
-
-footer ul:nth-child(2) {
-    flex-basis: 50%;
-}
-
-footer ul:nth-child(3) {
-    flex-basis: 25%;
-}
-
 .fa-chevron-up:not(.no-style) {
     display: inline-block;
     padding-left: 5px;
-    padding-right: 30px;
     font-size: 12px;
 }
 
@@ -189,11 +175,15 @@ footer ul:nth-child(3) {
     font-size: 12px;
 }
 
-footer ul, footer ul li {
+footer ul {
     display: flex;
-    justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+footer ul li {
+    display: flex;
+    align-items: center;
     padding-right: 20px;
 }
 
@@ -211,6 +201,11 @@ footer button {
     color: white;
     border-radius: 8px;
     cursor: pointer;
+}
+
+footer button:hover {
+    background-color: rgb(197, 5, 5);
+    color: rgba(255, 255, 255, 0.78);
 }
 
 footer li:hover :not(button) :not(.fa-share-from-square) {
