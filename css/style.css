@@ -1,0 +1,212 @@
+/* Global setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-s: 12px;
+    --font-m: 16px;
+    --font-l: 20px;
+    --font-xl: 24px;
+    --red: red;
+    --green: #24d559;
+    --grey: #a7a7a7;
+    --grey-2: #6b6b6b;
+    --grey-3: #313131;
+    --blue: #0d72ed;
+    --white: white;
+    --black: #000000;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: var(--white);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding: 0 20px;
+    align-items: center;
+}
+
+header div {
+    display: flex;
+}
+
+header div:nth-child(2) i , header div:nth-child(2) p {
+    background-color: var(--grey-2);
+    border-radius: 2px;
+    padding: 3px;
+    margin-right: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+header div p {
+    font-size: 12px;
+}
+
+header div:nth-child(1) i {
+    font-size: 14px;
+    padding-right: 5px;
+    color: red;
+}
+
+header div:nth-child(2) i {
+    font-size: 12px;
+    padding: 3px 4px;
+    display: inline;
+}
+
+/* Main */
+main {
+    height: 100vh;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}   
+
+.image {
+    position: relative;
+    padding: 0 15px;
+    width: calc((100% - 60px) / 5);
+}
+
+.image img {
+    max-width: 250px;
+}
+
+.image .inner-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(78, 78, 78, 0.8);
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    display: none;
+}
+
+.image .status {
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--blue);
+    padding: 3px 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    cursor: pointer;
+    display: none;
+}
+
+.image i:not(.status i) {
+    font-size: 12px;
+    padding-right: 5px;
+}
+
+.image img {
+    border-radius: 8px;
+}
+
+.image:hover .status {
+    display: flex;
+}
+
+.image:hover .inner-menu {
+    display: flex;
+}
+
+/* Footer */
+footer {
+    background-color: var(--grey-3);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+footer ul:nth-child(1) {
+    flex-basis: 25%;
+}
+
+footer ul:nth-child(2) {
+    flex-basis: 50%;
+}
+
+footer ul:nth-child(3) {
+    flex-basis: 25%;
+}
+
+.fa-chevron-up:not(.no-style) {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 30px;
+    font-size: 12px;
+}
+
+.no-style {
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+footer ul, footer ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 20px;
+}
+
+footer p {
+    font-size: 9px;
+    padding-top: 5px;
+    font-weight: 300;
+    text-align: center;
+}
+
+footer button {
+    background-color: red;
+    padding: 8px 12px;
+    border: 0;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+footer li:hover :not(button) :not(.fa-share-from-square) {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.fa-share-from-square {
+    color: var(--green);
+}
