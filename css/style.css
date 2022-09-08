@@ -42,7 +42,13 @@ header {
     justify-content: space-between;
     height: 40px;
     padding: 0 20px;
+    background-color: var(--black);
     align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
 }
 
 header div {
@@ -86,7 +92,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
+    align-content: flex-start;
     margin: 0 auto;
 }   
 
@@ -152,6 +158,11 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 998;
 }
 
 footer ul:nth-child(1) {
